@@ -1,0 +1,79 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 10px; /* Add units (e.g. px) to margin and padding properties */
+  padding: 0;
+}
+
+body {
+  background-color: #141414;
+  color: #d4c32a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 120px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+/* Movie list styles */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+
+.movie {
+  position: relative;
+  cursor: pointer;
+}
+
+.movie img {
+  width: 50%;
+  height: fit-content; /* Add units (e.g. px) to height property */
+  border-radius: 5px;
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.movie-overlay h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.movie-overlay p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.movie-overlay button {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #a19bdb;
+  border: none;
+  color: #141414;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Show movie overlay on hover */
+.movie:hover .movie-overlay {
+  opacity: 1;
+}
+
